@@ -7,6 +7,8 @@ Welcome to the Deploy a serverless web application to edit images using Amazon B
 This workshop will guide you through building a modern, serverless image editing application with the following components:
 
 Architecture Diagram
+<img width="1607" height="749" alt="image" src="https://github.com/user-attachments/assets/94a7b738-820c-49e8-a813-8dfd8c70bfd3" />
+
 
 Authentication: Amazon Cognito for user management
 Database: Amazon DynamoDB for image generation data storage
