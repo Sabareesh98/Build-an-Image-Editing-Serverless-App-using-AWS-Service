@@ -1,0 +1,53 @@
+2. Create a DynamoDB table
+In this step, you will create an Amazon DynamoDB  table to store application data and configure the necessary IAM permissions. DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. This table will store image generation data including input images, prompts, and output results.
+1.Create DynamoDB Table
+Search DynamoDB in the Services search bar. Select DynamoDB from the list. Then click Create table.
+
+Configure the table settings:
+
+Table name: ImageGenerationTable
+Partition key: id (String)
+Leave Sort key empty
+Under Default table settings, choose Default settings to use the recommended configuration.
+
+Click Create table.
+
+Wait for the table status to change to Active (this may take a few minutes).
+
+Once active, click on the table name ImageGenerationTable to view its details.
+2.Create IAM Policy for DynamoDB Access
+Now you need to create an IAM policy that allows your Lambda function to write data to the DynamoDB table.
+
+Search IAM in the Services search bar. Select IAM from the list.
+
+In the left navigation pane, click Policies.
+
+Click Create policy.
+
+Click the JSON tab.
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": "arn:aws:dynamodb:*:*:table/ImageGenerationTable"
+        }
+    ]
+}
+
+
+Click Next.
+
+Enter the policy details:
+
+Policy name: DynamoDBImageGenerationPolicy
+Description: Policy to allow Lambda function to write to ImageGenerationTable
+Click Create policy.
+
+
+
+Replace the default policy with the following JSON:
