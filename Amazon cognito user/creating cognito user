@@ -1,0 +1,33 @@
+1. Create Amazon Cognito User Pool and a Cognito User
+Amazon Cognito  is a robust identity management service provided by Amazon Web Services (AWS). It simplifies the process of adding user sign-up, sign-in, and access control to web and mobile applications. Cognito handles user authentication and authorization, allowing developers to focus on building their core application features. It integrates seamlessly with other AWS services, providing a secure and scalable solution for managing user identities across cloud-based applications. We use Amazon Cognito in our solution to have the user be verified before they can use the image editing application.
+
+We will create an Amazon Cognito user pool and then a test user within that pool. We will use this test account later during testing part of the application.
+1. Steps to create Amazon Cognito User Pool
+
+
+Search Cognito in the Services search bar. Select Cognito from the list. Then select Get started for free in less than five minutes.
+
+Cognito Service Search
+For Application type select Single-page application (SPA).
+For Name your application enter ImageEditApp.
+For Options for sign-in identifiers select Email and Username.
+Uncheck Enable self-registration.
+For Required attributes for sign-up select email.
+Scroll down and select Create user directory.
+Scroll down and select Go to Overview.
+
+2.Steps to create a user
+In the left panel click on Users under User management and then Create user.
+
+Input the following for the User information.
+
+User name enter User1
+Email address enter User1@mycompany.com
+Select Mark email address as verified
+Under Temporary password select Set a password and enter TestingGen@i@pp1 in the box.
+Then select Create user.
+
+🎬 Click to view walkthrough
+Select Overview in the left panel and copy the User pool ID and save it to a notepad. Then go to App clients under Applications in the left panel copy the Client ID and save it to a notepad.
+Both User pool ID and Client ID you have copied will be needed during the configuration of our app later.
+
