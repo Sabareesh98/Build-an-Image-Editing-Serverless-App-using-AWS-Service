@@ -1,6 +1,5 @@
 # Build-an-Image-Editing-Serverless-App-using-AWS-Service
-Deploy a serverless web application to edit images using Amazon Bedrock
-🎨 Workshop Overview
+
 Welcome to the Deploy a serverless web application to edit images using Amazon Bedrock workshop! In this hands-on workshop, you'll build a complete serverless image editing application using various AWS services. This solution features secure user authentication, persistent data storage, AI-powered image generation and editing capabilities, and a modern web interface.
 
 🏗️ Architecture Overview
